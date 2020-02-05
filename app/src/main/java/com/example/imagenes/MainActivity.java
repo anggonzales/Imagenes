@@ -17,4 +17,8 @@ public class MainActivity extends AppCompatActivity {
     public void ImageLoader(View view) {
         startActivity(new Intent(this, MiImageLoader.class));
     }
+
+    public void PicassoLoader(View view) {
+        startActivity(new Intent(this, MiPicasso.class));
+    }
 }

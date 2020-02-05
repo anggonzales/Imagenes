@@ -10,4 +10,10 @@
             android:layout_height="wrap_content"
             android:onClick="ImageLoader"
             android:text="Image Loader" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="PicassoLoader"
+            android:text="Picasso" />
 </LinearLayout>
