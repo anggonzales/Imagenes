@@ -3,6 +3,7 @@ package com.example.imagenes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -18,9 +19,9 @@ public class MiPicasso extends AppCompatActivity {
         setContentView(R.layout.activity_mi_picasso);
         miimagen=findViewById(R.id.miimagen2);
         //Picasso.with(this).invalidate("https://testand1.000webhostapp.com/mifoto.jpg");
-        Picasso.with(this).load("http://files2.akitaxi.com/auspuser.jpg")
-                .memoryPolicy(MemoryPolicy.NO_CACHE)
-                .networkPolicy(NetworkPolicy.NO_CACHE)
+        Picasso.with(this).load("https://notogaea-decoration.000webhostapp.com/android.png")
+                /*.memoryPolicy(MemoryPolicy.NO_CACHE)
+                .networkPolicy(NetworkPolicy.NO_CACHE)*/
                 .placeholder(R.mipmap.loading)
                 .error(R.mipmap.ic_launcher)
                 .into(miimagen, new com.squareup.picasso.Callback() {
@@ -33,5 +34,9 @@ public class MiPicasso extends AppCompatActivity {
                         Toast.makeText(MiPicasso.this, "Ocurrio un error en la descarga", Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    public void Invalidad(View view) {
+        Picasso.with(this).invalidate("https://notogaea-decoration.000webhostapp.com/android.png");
     }
 }
